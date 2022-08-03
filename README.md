@@ -3,8 +3,9 @@
 
 # Purpose
 ## To randomly generatee a passwor that meets certain criteria to create a passoword that is strong and secure
+
 ## GIVEN I need a new, secure password
-# #WHEN I click the button to generate a password
+## WHEN I click the button to generate a password
 ## THEN I am presented with a series of prompts for password criteria
 ## WHEN prompted for password criteria
 ## THEN I select which criteria to include in the password
