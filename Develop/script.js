@@ -5,6 +5,8 @@ function generatePassword() {
   const lowerCase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
   const upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
   const specialCharacters = ['!', '@', '#', '$', '%', '^', '&', '/', '*', '?'];
+  let gatherAnswers= []
+
 
   //prompt for length
 
@@ -32,12 +34,13 @@ function generatePassword() {
   //Selected Characters
 
   if (hasNumbers) {
-    hasNumbers = gatherAnswers.concat(numbers)
+    gatherAnswers = gatherAnswers.concat(numbers)
+
   } if (hasLowerCase) {
-    hasLowerCase = gatherAnswers.concat(lowerCase)
+    gatherAnswers = gatherAnswers.concat(lowerCase)
 
   } if (hasUpperCase) {
-    hasUpperCase = gatherAnswers.concat(upperCase)
+    gatherAnswers = gatherAnswers.concat(upperCase)
 
   } if (hasSpecialCharacters) {
 
@@ -47,12 +50,20 @@ function generatePassword() {
       alert('Password does not meet minimum requirements')
   }
 
-  //results
+ 
+  let results = []
+    for(let i=0; i<length; i++) {
+      let randomIndex = Math.floor(Math.random() * gatherAnswers.length)
+      let randomContent = gatherAnswers[randomIndex];
+      results.push(randomContent);
+    
+    }
+  return results.join("");
   
-}
+  //randomContent= gatherAnswers[length];
 
 
-
+  }
 
 
 //Get References to the #gerate element
@@ -67,4 +78,4 @@ function writePassword() {
 }
 
 //Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword)
