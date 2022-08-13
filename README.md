@@ -29,6 +29,7 @@ To randomly generatee a password that meets certain criteria to create a passowo
 * JavaScript
 
 ## Screenshot 
+* generate passcode page with box showing randomly generated password
 ![box showing radomly generated password](/assets/password%20Generator.png)
 
 ## Website 
