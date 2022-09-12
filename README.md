@@ -29,10 +29,11 @@ To randomly generatee a password that meets certain criteria to create a passowo
 * JavaScript
 
 ## Screenshot 
+generate passcode page with box showing randomly generated password
 ![box showing radomly generated password](/assets/password%20Generator.png)
 
 ## Website 
-git@github.com:francisca-hernandez/friendly-parakeet.git
+https://francisca-hernandez.github.io/passwordGenerator/
 
 
 ## Contribution
